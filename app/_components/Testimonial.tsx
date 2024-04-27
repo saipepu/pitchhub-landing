@@ -8,8 +8,8 @@ const Testimonial = () => {
     <div className='w-full max-w-[900px] flex flex-col justify-start items-start gap-5'>
 
       <div className='w-full flex flex-col justify-center items-center gap-2 px-8'>
-        <h1 className='w-full title lg:headline text-center'>Pitchhub’s Remarkable Impact</h1>
-        <p className="w-full lg:w-[60%] body text-center">Pitchhub is helping a couple of Events accomplishing Successful and Engaging Startup Pitching Competitions.</p>
+        <h1 className='w-[80%] md:w-full title lg:headline text-center'>Pitchhub’s Remarkable Impact</h1>
+        <p className="w-full md:w-[80%] lg:w-[60%] body text-center">Pitchhub is helping a couple of Events accomplishing Successful and Engaging Startup Pitching Competitions.</p>
       </div>
 
       <div className='w-full flex overflow-x-scroll gap-5 px-8'>

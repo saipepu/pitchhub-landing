@@ -15,8 +15,8 @@ export default function Home() {
       <Hero />
       <PainPoint />
       <Feature />
-      <FAQs />
       <Testimonial />
+      <FAQs />
       <Contact />
       <Footer />
     </div>

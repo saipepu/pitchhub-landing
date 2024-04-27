@@ -15,6 +15,12 @@ const config: Config = {
       },
       backgroundColor: {
         "neutral": "#F3F3F3"
+      },
+      boxShadow: {
+        'lg': '0 15px 50px -18px rgba(0,0,0,0.5)'
+      },
+      transitionProperty: {
+        'height': 'height'
       }
     },
   },

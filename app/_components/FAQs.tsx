@@ -1,6 +1,6 @@
 "use client";
 
-import { Minus, Plus } from 'lucide-react'
+import { ChevronDown, Minus, Plus } from 'lucide-react'
 import React, { useState } from 'react'
 
 const FAQs = () => {
@@ -32,17 +32,21 @@ const FAQs = () => {
       question: "Is there a trial version or demo available before I commit?",
       answer: "Yes, we offer a trial version and demo of Pitchhub so you can experience our platform firsthand before making a commitment. Contact us to learn more and get started with your trial today!"
     },
-    // {
-    //   question: "How secure is my data on Pitchhub?",
-    //   answer: "Security is our top priority. Pitchhub employs robust security measures to protect your data, including encryption, access controls, and regular security audits. Your data is safe and secure with us."
-    // },
+    {
+      question: "Ok! So what is the price?",
+      answer: "Since the product is just almost ready to launch and our team is really working hard on it every hour. If you are interest in so, please do not hesitate to contact us.",
+      button: "Join",
+      href: "#contact",
+      subtitle: "the world of innovations innovatively!"
+    },
   ]
 
   return (
-    <div className='w-full max-w-[900px] flex flex-col md:flex-row justify-between items-start px-8 gap-3 md:gap-0'>
+    <div className='w-full max-w-[900px] flex flex-col justify-start items-center px-8 gap-5'>
 
-      <div className="flex justify-start items-start">
-        <h1 className='title lg:headline'>FAQs</h1>
+      <div className="flex flex-col justify-start items-start gap-2">
+        <h1 className='w-full text-center title lg:headline'>Frequently Ask Questions</h1>
+        <p className='w-full text-center body'>Explore the answers to our most frequently ask questions.</p>
       </div>
 
       <div className="w-full max-w-[600px] min-h-[550px] lg:min-h-[400px] flex flex-col justify-start items-start gap-2">
@@ -51,34 +55,52 @@ const FAQs = () => {
             <div
               key={index}
               className='w-full flex flex-col justify-start items-start gap-2'
-              onClick={() => {
-                if(selectedQ != index) {
-                  setSelectedQ(index)
-                }
-              }}
             >
-              <div className='w-full p-3 rounded-lg flex justify-between items-start bg-neutral gap-1'>
+              <div className='w-full p-3 rounded-lg flex justify-between items-start gap-1 border-2 border-[#F9F9F9]'>
                 <div className='w-full flex justify-start items-start gap-2'>
                   <p className='body-bold'>
                     {index+1}.
                   </p>
-                  <p className='body-bold'>
-                    {item.question}
-                  </p>
+                  <div className={`w-full transition-[height] duration-500 ${index == selectedQ ? item.button ? "h-[150px]" : "h-[120px]" : "h-[24px]"} overflow-hidden flex flex-col justify-start items-start gap-5`}>
+                    <p
+                      className='w-full body-bold cursor-pointer'
+                      onClick={() => {
+                        if(selectedQ != index) {
+                          setSelectedQ(index)
+                        } else {
+                          setSelectedQ(99)
+                        }
+                      }}
+                    >
+                      {item.question}
+                    </p>
+                    {/* {index == selectedQ && */}
+                      <div className={`w-full flex flex-col justify-start items-start ${item.button && "gap-3"}`}>
+                        <p className='body font-light tracking-wide'>{item.answer}</p>
+                        {item.button && 
+                          <div className='w-full flex justify-start items-center gap-2'>
+                            <a href={item.href} className='px-2 py-1 rounded-md bg-black text-white body-bold'>
+                              {item.button}
+                            </a>
+                            <p className='body'>{item.subtitle}</p>
+                          </div>
+                        }
+                      </div>
+                  </div>
                 </div>
-                <div className='cursor-pointer flex justify-center items-start'>
-                  {index == selectedQ ? 
-                    <Minus width={20} height={20} />
-                  :
-                    <Plus width={20} height={20} />
-                  }
+                <div
+                  className={`cursor-pointer flex justify-center items-start duration-500 rotate-0 ${index == selectedQ && 'rotate-180'}`}
+                  onClick={() => {
+                    if(selectedQ != index) {
+                      setSelectedQ(index)
+                    } else {
+                      setSelectedQ(99)
+                    }
+                  }}
+                >
+                  <ChevronDown width={24} height={24} />
                 </div>
               </div>
-              {index == selectedQ &&
-                <div className='w-full flex pl-7 pb-3'>
-                  <p className='body font-light tracking-wide'>{item.answer}</p>
-                </div>
-              }
             </div>
           )
         })}

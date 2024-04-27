@@ -5,9 +5,12 @@ import char2 from '@/public/char2.png'
 
 const Contact = () => {
   return (
-    <div className='w-full max-w-[900px] flex flex-col md:flex-row justify-center items-center gap-2 px-8'>
+    <div className='relative w-full max-w-[900px] flex flex-col md:flex-row justify-center items-center gap-2 px-8'>
+
+      {/* background color */}
+      <div className='z-0 min-w-[100vw] h-full absolute bg-[#F9F9F9]'></div>
       
-      <div className='w-full flex flex-col justify-start items-start gap-8'>
+      <div className='z-10 w-full flex flex-col justify-start items-start gap-8'>
         <div className='w-full h-full flex flex-col justify-center items-start gap-2'>
           <h1 className='title lg:headline'>Be the Pioneer in Startup Pitching Competitions</h1>
           <p className='body'>Join our exclusive community and be the first to revolutionize your competitions with Pitchhub.</p>
