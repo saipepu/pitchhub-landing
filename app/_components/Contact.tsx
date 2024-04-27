@@ -8,7 +8,7 @@ const Contact = () => {
     <div id="contact" className='relative w-full max-w-[900px] flex flex-col md:flex-row justify-center items-center gap-2 px-8'>
 
       {/* background color */}
-      <div className='z-0 min-w-[100vw] h-full absolute bg-[#F9F9F9]'></div>
+      {/* <div className='z-0 min-w-[100vw] h-full absolute bg-[#F9F9F9]'></div> */}
       
       <div className='z-10 w-full flex flex-col justify-start items-start gap-8'>
         <div className='w-full h-full flex flex-col justify-center items-start gap-2'>
