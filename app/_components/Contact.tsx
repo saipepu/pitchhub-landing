@@ -5,7 +5,7 @@ import char2 from '@/public/char2.png'
 
 const Contact = () => {
   return (
-    <div className='relative w-full max-w-[900px] flex flex-col md:flex-row justify-center items-center gap-2 px-8'>
+    <div id="contact" className='relative w-full max-w-[900px] flex flex-col md:flex-row justify-center items-center gap-2 px-8'>
 
       {/* background color */}
       <div className='z-0 min-w-[100vw] h-full absolute bg-[#F9F9F9]'></div>

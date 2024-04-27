@@ -61,7 +61,7 @@ const FAQs = () => {
                   <p className='body-bold'>
                     {index+1}.
                   </p>
-                  <div className={`w-full transition-[height] duration-500 ${index == selectedQ ? item.button ? "h-[150px]" : "h-[120px]" : "h-[24px]"} overflow-hidden flex flex-col justify-start items-start gap-5`}>
+                  <div className={`w-full transition-[height] flex flex-col justify-start items-start`}>
                     <p
                       className='w-full body-bold cursor-pointer'
                       onClick={() => {
@@ -74,18 +74,22 @@ const FAQs = () => {
                     >
                       {item.question}
                     </p>
-                    {/* {index == selectedQ && */}
-                      <div className={`w-full flex flex-col justify-start items-start ${item.button && "gap-3"}`}>
-                        <p className='body font-light tracking-wide'>{item.answer}</p>
-                        {item.button && 
-                          <div className='w-full flex justify-start items-center gap-2'>
-                            <a href={item.href} className='px-2 py-1 rounded-md bg-black text-white body-bold'>
-                              {item.button}
-                            </a>
-                            <p className='body'>{item.subtitle}</p>
-                          </div>
-                        }
-                      </div>
+                    <div
+                      className={`w-full flex flex-col justify-start items-start
+                        ${item.button && "gap-3"}
+                        duration-500 ${index == selectedQ ? item.button ? "pt-3 h-[180px] md:h-[150px]" : "pt-3 h-[160px] md:h-[100px]" : "h-[0px]"} overflow-hidden
+                        `}
+                      >
+                      <p className='body font-light tracking-wide'>{item.answer}</p>
+                      {item.button && 
+                        <div className='w-full flex justify-start items-center gap-2'>
+                          <a href={item.href} className='px-2 py-1 rounded-md bg-black text-white body-bold'>
+                            {item.button}
+                          </a>
+                          <p className='body'>{item.subtitle}</p>
+                        </div>
+                      }
+                    </div>
                   </div>
                 </div>
                 <div
