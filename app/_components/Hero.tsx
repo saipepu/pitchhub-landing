@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className='z-0 absolute -top-[100px] lg:-top-[120px] w-full h-[300px] md:h-[500px] flex flex-col justify-center items-center pointer-events-none'>
+        <div className='z-0 absolute -top-[100px] lg:-top-[120px] w-full h-[300px] md:h-[500px] flex flex-col justify-center items-center'>
           <div className='flex justify-center items-center cursor-pointer scale-[0.65] md:scale-100 lg:scale-125'>
             <Spline scene="https://prod.spline.design/kTN3YL7IuMbVrsCy/scene.splinecode" />
             {/* <Spline scene="https://prod.spline.design/JDbMyx-gGZ13UlHQ/scene.splinecode" /> */}
